@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website Title</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #292929; /* Set background color to black */
+            color: white; /* Set text color to white */
+        }
+        header {
+            color: white; /* Set header text color to white */
+            padding: 10;
+            text-align: center;
+            position: relative;
+            margin-top: 10px;
+            animation: shake 15s infinite alternate;
+        }
+
+        .footer {
+          position: relative;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          text-align: center;
+          font-size: 10px;
+          margin-top: 100px;
+          font-style: light;
+        }
+        @keyframes shake {
+            0%, 100% { transform: translate(0, 0); }
+            25% { transform: translate(-3px, 5px)  rotate(3deg) ; }
+            50% { transform: translate(5px, -2px)  rotate(-2deg) ; }
+            75% { transform: translate(4px, 5px) rotate(-5deg) ; }
+        }
+
+        @keyframes shake2 {
+        0% { transform: translate(1px, 1px) rotate(0deg); }
+        10% { transform: translate(-1px, -2px) rotate(-1deg); }
+        20% { transform: translate(-3px, 0px) rotate(1deg); }
+        30% { transform: translate(3px, 2px) rotate(0deg); }
+        40% { transform: translate(1px, -1px) rotate(1deg); }
+        50% { transform: translate(-1px, 2px) rotate(-1deg); }
+        60% { transform: translate(-3px, 1px) rotate(0deg); }
+        70% { transform: translate(3px, 1px) rotate(-1deg); }
+        80% { transform: translate(-1px, -1px) rotate(1deg); }
+        90% { transform: translate(1px, 2px) rotate(0deg); }
+        100% { transform: translate(1px, -2px) rotate(-1deg); }
+        }
+
+        .banner {
+            display: flex;
+            position: fixed;
+            justify-content: center; /* Horizontally center the image */
+            bottom: 0;
+            padding: 100 px;
+            z-index: -1;
+            
+            opacity: 10%;
+        }
+
+        .banner img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: cover;
+        }
+        .title {
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 15px;
+        }
+        .features {
+            text-align: center;
+            padding: 10px;
+            margin-left: 100px;
+            margin-right: 100px;
+        }
+        .feature {
+            display: inline-block;
+            margin: 10px;
+            padding-left: 50px;
+            padding-right: 50px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: transform 0.5s ease-in-out, color 0.5s ease-in-out;
+        }
+        .featureh1 {
+            display: inline-block;
+            margin: 0 10px;
+            font-size: 130px;
+            cursor: pointer;
+            transition: transform 1s ease-in-out ,color 1s ease-in-out;
+        }
+        .featureht {
+            display: inline-block;
+            margin-bottom: 10px;
+            margin-top: 0px;
+            font-size: 20px;
+            cursor: pointer;
+            transition: transform 0.5s ease-in-out ,color 0.2s ease-in-out;
+        }
+        .bottom-box {
+            background-image: url('https://ugc.production.linktr.ee/b3cb0d46-27b6-4467-b44a-05ea6e3a9eb1_tempImage1ulrBJ.jpeg?io=true&size=thumbnail-stack-v1_0');
+            opacity: 30%;
+            position: absolute;
+            width: 100%;
+            top: 495px;
+            height: 80px;
+            z-index: -1;
+        }
+        .feature:hover {
+            color: #1DB954;
+            transform: scale(1.1);
+        }
+        .featureh1:hover {
+            color: #677987;
+            transform: scale(1.07) rotate(1deg);
+            
+        }
+        .featureht:hover {
+            color: #677987;
+        }
+        .spotify-container {
+            position: relative;
+            margin-bottom: 0;
+            width: 75%; /* Same width as the iframe */
+            margin: 0 auto; /* Center the container */
+        }
+        .spotify-text {
+            position: absolute;
+            top: -43px;
+            left: 0;
+            color: White; /* Set Spotify text color to white */
+            font-weight: 500;
+            font-family: Roboto;
+        }
+        .spotify-frame {
+            position: relative; /* Ensure the container is positioned relative */
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <h1 class="featureh1" onclick="location.href='#'">Oldskie.</h1>
+    </header>
+    <banner class = "banner img">
+        <img src="">
+    </banner>
+    <p style = "text-align: center"> Musician. Artist. Guy. </p>
+    <div class="title">
+        <h2><div class = "featureht" onclick="location.href='newsletter.html'">Stay updated by joining my Newsletter!</h2>
+    </div>
+    <div class="spotify-container">
+        <p class="spotify-text">Preview my <span style="color: #1DB954;"> Spotify<span style="color: white;">:</p>
+        <div class="spotify-frame">
+            <iframe style="border-radius:0px;" src="https://open.spotify.com/embed/artist/2U6JpJ46gBll5gwfJwT8Uh?utm_source=generator" width="100%" height="200" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        </div>
+    </div>
+    <div class = "bottom-box"></div>
+      <div class="features">
+          <div class="feature" onclick="location.href='about.html'">  About me  </div>
+          <div class="feature" onclick="location.href='links.html'">  Important Links  </div>
+          <div class="feature" onclick="location.href='#'"; style = "animation: shake2 0.4s infinite alternate;;">  Donate  </div>
+    </div>
+    </div>
+    <div class = "footer"> 2024 CJR Productions. All Rights Reserved.</div>
+</body>
+</html>

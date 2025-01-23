@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newsletter Signup</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #292929; /* Set background color to black */
+            color: white; /* Set text color to white */
+        }
+
+        header {
+            color: white; /* Set header text color to white */
+            text-align: center;
+            position: relative;
+            margin-top: 10px;
+            animation: shake 15s infinite alternate;
+        }
+
+        @keyframes shake {
+            0%, 100% { transform: translate(0, 0); }
+            25% { transform: translate(-3px, 5px)  rotate(3deg) ; }
+            50% { transform: translate(5px, -2px)  rotate(-2deg) ; }
+            75% { transform: translate(4px, 5px) rotate(-5deg) ; }
+        }
+
+        .footer {
+          position: relative;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          text-align: center;
+          font-size: 10px;
+          margin-top: 100px;
+          font-style: light;
+        }
+
+        .featureh1 {
+            display: inline-block;
+            margin: 0 10px;
+            font-size: 130px;
+            cursor: pointer;
+            transition: transform 1s ease-in-out ,color 1s ease-in-out;
+        }
+
+        .featureh1:hover {
+            color: #677987;
+            transform: scale(1.07) rotate(1deg);
+            
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 100px auto;
+            background-color:#222222;
+            opacity: 100%;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .subscribe-form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        button {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 6px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        input[type="text"],
+        input[type="email"] {
+            background-color: #292929;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus {
+            outline: none;
+            background-color:  #999;
+            transition: background-color 0.3s ease;
+        }
+
+        label {
+            position: absolute;
+            top: 50%;
+            left: 10px;
+            transform: translateY(-50%);
+            color: #999;
+            transition: all 0.3s ease;
+            pointer-events: none;
+        }
+
+        input[type="text"]:focus + label,
+        input[type="email"]:focus + label,
+        input[type="text"]:not(:placeholder-shown) + label,
+        input[type="email"]:not(:placeholder-shown) + label {
+            top: 5px;
+            left: 10px;
+            font-size: 14px;
+            color: #666;
+        }
+
+        button {
+            background-color: #677987;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color:  #1DB954;
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <h1 class="featureh1" onclick="location.href='index.html'" ; alt = "back to Home" ;>Oldskie.</h1>
+    </header>
+    <div class="container">
+        <h1>Subscribe to my Newsletter!</h1>
+        <p style = "font-size: 8px; text-align: center; color:  #999; padding: 10px"> By subscribing to this Newsletter, you agree to all the <a href="https://www.youtube.com/watch?v=uHgt8giw1LY" style = "color:#1DB954">terms and conditions</a>.</p>
+        <form action="newsletter.php" method="post" class="subscribe-form">
+            <div class="form-group">
+                <input type="text" name="name" id="name" placeholder="Your name" required>
+                <label for="name"> </label>
+            </div>
+            <div class="form-group">
+                <input type="email" name="email" id="email" placeholder="Your email" required>
+                <label for="email"> </label>
+            </div>
+            <button type="submit">Subscribe</button>
+        </form>
+    </div>
+    <div class = "footer"> 2024 CJR Productions. All Rights Reserved.</div>
+</body>
+</html>
